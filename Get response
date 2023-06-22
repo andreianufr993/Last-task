@@ -1,0 +1,8 @@
+import requests
+def some(con):
+    return 'location'.encode() in con
+while True:
+    res = requests.get('https://fortnite-api.com/v1/map')
+    content = res.content
+
+    print('is map ' + str(some(content)))
